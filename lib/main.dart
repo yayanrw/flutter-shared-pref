@@ -64,6 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _loadNumber() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _counter = prefs.getInt(counterNumberPrefs) ?? 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
