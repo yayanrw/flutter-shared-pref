@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               child: const Text('Reset'),
-              onPressed: () {},
+              onPressed: _resetNumber,
             ),
           ],
         ),
