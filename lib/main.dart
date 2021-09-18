@@ -71,6 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _resetNumber() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.remove(counterNumberPrefs);
+    _loadNumber();
+  }
+
   @override
   void initState() {
     super.initState();
